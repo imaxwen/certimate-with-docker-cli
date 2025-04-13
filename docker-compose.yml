@@ -1,0 +1,14 @@
+# docker-compose example
+
+services:
+  certimate:
+    image: maxwen/certimate-docker:latest
+    container_name: certimate-server
+    ports:
+      - 8090:8090
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./volumes:/app/pb_data
+    restart: unless-stopped
