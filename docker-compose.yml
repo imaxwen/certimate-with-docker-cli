@@ -2,7 +2,7 @@
 
 services:
   certimate:
-    image: maxwen/certimate-docker:latest
+    image: registry.cn-shanghai.aliyuncs.com/maxwen/certimate-docker:latest
     container_name: certimate-server
     ports:
       - 8090:8090

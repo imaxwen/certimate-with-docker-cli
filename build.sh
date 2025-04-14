@@ -10,8 +10,8 @@ fi
 VERSION=$1
 PLATFORM=${2:-linux_amd64}
 PACKAGE_NAME=certimate.zip
-IMAGE_NAME_VERSIONED=maxwen/certimate-docker:${VERSION}
-IMAGE_NAME_LATEST=maxwen/certimate-docker:latest
+IMAGE_NAME_VERSIONED=registry.cn-shanghai.aliyuncs.com/maxwen/certimate-docker:${VERSION}
+IMAGE_NAME_LATEST=registry.cn-shanghai.aliyuncs.com/maxwen/certimate-docker:latest
 
 DOWNLOAD_URL="https://github.com/usual2970/certimate/releases/download/v${VERSION}/certimate_${VERSION}_${PLATFORM}.zip"
 
@@ -39,3 +39,5 @@ docker build -t ${IMAGE_NAME_VERSIONED} .
 docker push ${IMAGE_NAME_VERSIONED}
 docker tag ${IMAGE_NAME_VERSIONED} ${IMAGE_NAME_LATEST}
 docker push ${IMAGE_NAME_LATEST}
+
+echo "Successfully built and pushed Docker image: \n ${IMAGE_NAME_VERSIONED}\n ${IMAGE_NAME_LATEST}"
