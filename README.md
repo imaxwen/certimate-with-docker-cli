@@ -19,11 +19,6 @@ cd certimate-with-docker-cli
 # plateform options: 
 # - linux_amd64
 # - linux_arm64
-# - linux_armv7
-# - darwin_amd64
-# - darwin_arm64
-# - windows_amd64
-# - windows_arm64
 
 # change the registry url in build.sh to your registry
 
