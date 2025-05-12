@@ -1,4 +1,4 @@
-FROM docker:cli 
+FROM --platform=linux/amd64 docker:cli 
 
 WORKDIR /app
 
